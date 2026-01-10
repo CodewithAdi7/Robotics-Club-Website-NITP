@@ -129,44 +129,99 @@
     </div>
 
     <div class="container">
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Autonomous Drone</h3>
-                <p>A quadcopter capable of mapping terrain and navigating obstacles autonomously using Lidar and SLAM.</p>
-            </div>
-            <div class="project-card">
-                <h3>Mars Rover Prototype</h3>
-                <p>A 6-wheel rocker-bogie mechanism rover designed for traversing rough terrains efficiently.</p>
-            </div>
-            <div class="project-card">
-                <h3>Humanoid Arm</h3>
-                <p>A 5-DOF robotic arm controlled via haptic feedback gloves for precise remote operations.</p>
-            </div>
-            <div class="project-card">
-                <h3>Line Follower V2</h3>
-                <p>High speed PID based line follower created for national competitions.</p>
-            </div>
+        <div class="event">
+            <h3>Fresher's Orientation</h3>
+            <img class="event-img" src="Event Images/Fresher's Orientation 2.png" alt="Fresher's Orientation">
+            <p>
+                An interactive orientation by the Robotics Club, NIT Patna designed exclusively for freshers—packed with
+                fun
+                activities, learning, rewards, and a chance to shine on our social platforms.
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Arduino Jam</h3>
+            <img class="event-img" src="Event Images/Ardiuno Jam.webp" alt="Arduino Jam">
+            <p>
+                Arduino Jam is an interactive workshop covering Arduino fundamentals, IDE setup, circuit simulation, and
+                sensor basics, designed to help students kickstart hands-on electronics.
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Digital Detective</h3>
+            <img class="event-img" src="Event Images/Digital Detective 2.png" alt="Digital Detective">
+            <p>
+                Digital Detective is a 24-hour technical treasure hunt featuring passcode-encrypted riddles that test
+                logic,
+                speed, and problem-solving skills. Participants race against time to crack every clue and emerge as the
+                ultimate winner.
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Codejuring</h3>
+            <img class="event-img" src="Event Images/Codejuring.png" alt="Codejuring" >
+            <p>
+                Codejuring is a competitive online event featuring an aptitude test followed by a coding challenge,
+                designed
+                to assess logical thinking and problem-solving skills.
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Robowar</h3>
+            <img class="event-img" src="Event Images/Robowar.png" alt="Robowar" >
+            <p>
+                “Don’t be satisfied with stories of others—create your own legend.”
+                <br><br>
+                Robowar is the ultimate test of engineering skill and strategy, where combat robots clash in an intense
+                arena
+                battle. Witness power, precision, and innovation collide as teams fight for dominance.
+                <br><br>
+                <strong>Prize Pool:</strong> ₹15,000 for the winner 🏆
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Abhiyutthan</h3>
+            <img class="event-img" src="Event Images/Abhiyutthan 2.png" alt="Abhiyutthan" >
+            <p>
+                A mega event consisting of multiple sub-events aimed at stimulating interest in robotics and technology.
+                Designed to give students a fun yet technical break from academic routines.
+                <br><br>
+                <strong>Rewards:</strong><br>
+                • Swag Kits containing Tech Stickers and Key-chains<br>
+                • Egghead Io’s free 1-year codes<br>
+                • Code for Cause discount coupons
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>Hack O Heist</h3>
+            <img class="event-img" src="Event Images/Hack O Heist 2.png" alt="Hack O Heist" >
+            <p>
+                Hack O Heist is a 36-hour online hackathon inspired by the Money Heist theme, where participants build
+                innovative solutions to real-world social and ecological problems.
+            </p>
+        </div>
+
+
+        <div class="event">
+            <h3>The Next Hokage</h3>
+            <img class="event-img" src="Event Images/The Next Hokage.png" alt="The Next Hokage" >
+            <p>
+                The Next Hokage is a high-speed Robo Race event organized by the Robotics Club, NIT Patna, where teams
+                compete
+                with their robots in an adrenaline-filled race of speed, control, and precision.
+            </p>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Same Javascript for Menu
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        const navLinksLi = document.querySelectorAll('.nav-links li');
-
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navLinksLi.forEach((link, index) => {
-                if (link.style.animation) { link.style.animation = ''; } 
-                else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
-            });
-            burger.classList.toggle('toggle');
-        });
-    </script>
 </body>
 </html>
