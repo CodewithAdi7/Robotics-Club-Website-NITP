@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | NIT Patna Robotics Club</title>
     <style>
-        
         :root {
             --primary-color: #00d4ff;
             --secondary-color: #0056b3;
@@ -17,7 +17,11 @@
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: var(--font-main);
@@ -27,11 +31,19 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures footer stays at bottom */
+            min-height: 100vh;
+            /* Ensures footer stays at bottom */
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- HEADER STYLES (Same as index.html) --- */
         header {
@@ -47,35 +59,90 @@
             backdrop-filter: blur(10px);
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a:hover { color: var(--primary-color); text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
-        
-        /* Highlight the active page link */
-        .nav-links a.active { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
-
-        /* --- BURGER MENU STYLES --- */
-        .burger { display: none; cursor: pointer; }
-        .burger div { width: 25px; height: 3px; background-color: var(--text-light); margin: 5px; transition: all 0.3s ease; }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute; top: 70px; right: 0; height: auto;
-                background: var(--card-bg); width: 100%; flex-direction: column;
-                align-items: center; padding: 30px 0; border-bottom: 2px solid var(--primary-color);
-                transform: translateY(-150%); opacity: 0; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; z-index: 999;
-            }
-            .nav-links.active { transform: translateY(0%); opacity: 1; }
-            .burger { display: block; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); background-color: var(--primary-color); }
-        .toggle .line2 { opacity: 0; }
-        .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); background-color: var(--primary-color); }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Highlight the active page link */
+        .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* --- BURGER MENU STYLES --- */
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-light);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                height: auto;
+                background: var(--card-bg);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                border-bottom: 2px solid var(--primary-color);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+            background-color: var(--primary-color);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+            background-color: var(--primary-color);
+        }
 
         /* --- PAGE SPECIFIC STYLES --- */
         .page-header {
-            background: linear-gradient(rgba(10, 15, 28, 0.8), rgba(10, 15, 28, 0.8)), url('https://source.unsplash.com/random/1600x400/?robotics'); /* Placeholder image */
+            background: linear-gradient(rgba(10, 15, 28, 0.8), rgba(10, 15, 28, 0.8)), url('https://source.unsplash.com/random/1600x400/?robotics');
+            /* Placeholder image */
             background-size: cover;
             background-position: center;
             height: 30vh;
@@ -85,26 +152,55 @@
             margin-bottom: 40px;
         }
 
-        .page-header h1 { font-size: 3rem; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-        .container { padding: 0 10%; flex: 1; margin-bottom: 60px; }
+        .container {
+            padding: 0 10%;
+            flex: 1;
+            margin-bottom: 60px;
+        }
 
         .projects-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .project-card {
-            background: var(--card-bg); padding: 20px; border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
         }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
-        .project-card h3 { margin-bottom: 15px; color: var(--primary-color); }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .project-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
 
         /* --- FOOTER --- */
-        footer { background: #05080f; text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto; }
+        footer {
+            background: #05080f;
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
     </style>
     <link rel="stylesheet" href="newstyle.css">
 </head>
+
 <body>
 
     <header>
@@ -113,7 +209,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li> <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
@@ -131,42 +228,191 @@
     <div class="container">
         <div class="projects-grid">
             <div class="project-card">
-                <h3>Autonomous Drone</h3>
-                <p>A quadcopter capable of mapping terrain and navigating obstacles autonomously using Lidar and SLAM.</p>
-            </div>
-            <div class="project-card">
-                <h3>Mars Rover Prototype</h3>
-                <p>A 6-wheel rocker-bogie mechanism rover designed for traversing rough terrains efficiently.</p>
-            </div>
-            <div class="project-card">
-                <h3>Humanoid Arm</h3>
-                <p>A 5-DOF robotic arm controlled via haptic feedback gloves for precise remote operations.</p>
-            </div>
-            <div class="project-card">
-                <h3>Line Follower V2</h3>
-                <p>High speed PID based line follower created for national competitions.</p>
-            </div>
-        </div>
-    </div>
+                <div class="project">
+                    <img src="project images/Self balancing bot.webp" class="project-img"
+                        alt="Self balancing robot project by Robotics Club NIT Patna">
+                    <div class="detail">
+                        <h2>Self Balancing Bot</h2>
+                        <p>
+                            A self-balancing robot works on the principle of an inverted pendulum,
+                            where the system is naturally unstable and tends to fall if not actively controlled.
+                            Unlike a normal pendulum, this robot cannot balance itself without continuous correction.
+                        </p>
+                        <p>
+                            The robot continuously measures its tilt angle, direction of fall, and rate of movement
+                            using an MPU6050 sensor (gyroscope + accelerometer).
+                        </p>
+                    </div>
+                </div>
+            </div>        
+                <div class="project-card">
+                    <div class="project">
+                        <img src="project images/Mark 1.6.png" class="project-img"
+                            alt="Mark 1.6 robotic arm project by Robotics Club NIT Patna">
+                        <div class="detail">
+                            <h2>Mark 1.6</h2>
+                            <p>
+                                Mark 1.6 is a wireless robotic arm system mounted on a four-wheel drive (4WD) mobile
+                                chassis.
+                                The robot is controlled remotely using Bluetooth, allowing smooth and flexible
+                                operation.
+                            </p>
+                            <p>
+                                The robotic arm is 3D-printed, making the design lightweight, customizable, and
+                                cost-effective.
+                                NRF modules are used for wireless communication, enabling reliable data transmission.
+                            </p>
+                        </div>
+                    </div>
+                </div>    
 
-    <footer>
-        <p>&copy; 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
-    </footer>
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/line follower bot.png" class="project-img"
+                                alt="Line follower robot project by Robotics Club NIT Patna">
+                            <div class="detail">
+                                <h2>Line Follower Bot</h2>
+                                <p>
+                                    A line follower robot is designed to automatically track a predefined path marked on
+                                    the floor.
+                                    The robot uses infrared (IR) sensors to detect the line and adjust wheel movement
+                                    accordingly.
+                                </p>
+                                <p>
+                                    Through real-time sensing and control, the robot follows the track smoothly and
+                                    accurately,
+                                    making it suitable for automation tasks and robotics competitions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                        <div class="project-card">
+                            <<div class="project">
+                                <img src="project images/pluto x.png" class="project-img"
+                                    alt="Pluto X nano drone project by Robotics Club NIT Patna">
+                                <div class="detail">
+                                    <h2>Pluto X</h2>
+                                    <p>
+                                        Pluto X is a compact open-source nano drone developed by an Indian startup at
+                                        IIT Bombay.
+                                        It features a Wi-Fi enabled camera capable of supporting ROS-based image
+                                        processing.
+                                    </p>
+                                    <p>
+                                        The drone supports both manual and autonomous operation, making it suitable for
+                                        research,
+                                        experimentation, and computer vision applications.
+                                    </p>
+                                </div>
+                            </div>    
+                        </div>
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/3D Printing.png" class="project-img"
+                                alt="3D printing project by Robotics Club NIT Patna">
+                            <div class="detail">
+                                <h2>3D Printing</h2>
+                                <p>
+                                    3D printing is an additive manufacturing technique used to create physical objects
+                                    layer by layer from digital designs.
+                                </p>
+                                <p>
+                                    This method reduces material waste and allows complex shapes to be produced easily,
+                                    making it widely used in robotics, prototyping, and research.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/Automated bot.png" class="project-img"
+                                alt="Automated robot project by Robotics Club NIT Patna">
+                            <div class="detail">
+                                <h2>Automated Bot</h2>
+                                <p>
+                                    This automated robot navigates along a wall while maintaining a fixed distance using
+                                    laser distance sensors and closed-loop feedback control.
+                                </p>
+                                <p>
+                                    The system tracks laps and detected objects using IR sensors and displays data on a
+                                    16×2 LCD.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/Radar Navigation.png" class="project-img"
+                                alt="Radar navigation robotics project">
+                            <div class="detail">
+                                <h2>Radar Navigation</h2>
+                                <p>
+                                    Radar navigation systems detect and track objects to ensure safe movement,
+                                    especially in poor visibility conditions like fog or rain.
+                                </p>
+                                <p>
+                                    X-band and S-band radars provide different resolution and range capabilities
+                                    for reliable navigation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/hexapod.png" class="project-img"
+                                alt="Hexapod robot project by Robotics Club NIT Patna">
+                            <div class="detail">
+                                <h2>Hexapod</h2>
+                                <p>
+                                    A hexapod robot offers precise movement across six degrees of freedom,
+                                    enabling stable motion on uneven surfaces.
+                                </p>
+                                <p>
+                                    Built using an Arduino Nano, SG90 servos, and PCA9685 driver,
+                                    the robot is lightweight, customizable, and suitable for experimentation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
 
-    <script>
-        // Same Javascript for Menu
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        const navLinksLi = document.querySelectorAll('.nav-links li');
+                    <div class="project-card">
+                        <div class="project">
+                            <img src="project images/Drone.png" class="project-img"
+                                alt="Air quality monitoring drone project by Robotics Club NIT Patna">
+                            <div class="detail">
+                                <h2>Drone</h2>
+                                <p class="para">
+                                    This drone monitors air quality by measuring atmospheric gas concentrations
+                                    and transmitting data to Google Firebase in real time.
+                                </p>
+                                <p>
+                                    It uses an MQ-2 gas sensor, ESP8266 NodeMCU, and a KK 2.1.5 flight controller
+                                    for stable and controlled flight.
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
 
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navLinksLi.forEach((link, index) => {
-                if (link.style.animation) { link.style.animation = ''; } 
-                else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
-            });
-            burger.classList.toggle('toggle');
-        });
-    </script>
+
+                        <footer>
+                            <p>&copy; 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
+                        </footer>
+
+                        <script>
+                            // Same Javascript for Menu
+                            const burger = document.getElementById('burger');
+                            const navLinks = document.getElementById('navLinks');
+                            const navLinksLi = document.querySelectorAll('.nav-links li');
+
+                            burger.addEventListener('click', () => {
+                                navLinks.classList.toggle('active');
+                                navLinksLi.forEach((link, index) => {
+                                    if (link.style.animation) { link.style.animation = ''; }
+                                    else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
+                                });
+                                burger.classList.toggle('toggle');
+                            });
+                        </script>
 </body>
+
 </html>
