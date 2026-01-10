@@ -92,7 +92,15 @@ header {
     -webkit-text-fill-color: transparent;
     animation: glow 3s infinite alternate;
 }
-
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #fff, var(--primary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 3s infinite alternate;
+}
 .hero p {
     font-size: 1.2rem;
     color: var(--text-muted);
