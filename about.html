@@ -225,54 +225,112 @@
         <h1>About Us</h1>
     </div>
 
-    <div class="container">
+    <section class="about-section">
         <h2 class="section-title">Who We Are</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <div class="about-content">
             <p>
-                Robotics club has been embodiment of innovation at NIT Patna. Being formed in year 2015-16 by Nripendra
-                Saroj Sir, our club boasts a glorious legacy. With our members ranging from seasoned coders to brilliant
-                designers to hardware scientists, Our members have also represented our college at Smart India
-                hackathon, headed by our current Captain Dheeraj Kumar Sir. We have been constantly working to enhance
-                the students’ technical skills and making them aware of the fascinating world of automation, robotics
-                and electronics which surrounds us. Boasting of a huge roster of exciting and engaging events, This
-                year’s techno-cultural fest was nothing less than a rollercoaster ride for us.</p>
-        </div>
-    </div>
-    <div class="container">
-        <h2 class="section-title">What We Do ?</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                The Robotics Club of NIT Patna has been an embodiment of innovation since its inception in 2015–16
+                under the guidance of <strong>Mr. Nripendra Saroj</strong>.
+                Our club carries a proud legacy of excellence, collaboration, and technological exploration.
+            </p>
+
             <p>
-                Does robots fascinates you and have you ever fantasized to build one for yourself? The Robotics club NIT
-                Patna is the place! The Robotics club at NIT Patna strives to stimulate interest in robotics among the
-                students of the institute. Today robotics is a rapidly growing field, as technological advances continue
-                researching designing and building new robots serve various practical purposes. Robotics is a field
-                which is
-                not limited to a particular branch and is way more diverse than our own imagination and so is our
-                student
-                club. We are a diverse group of robotics nerds who find roots across all academic departments of the
-                Institute. We at Robotics club believe in working and growing together. You can know more about us from
-                here. #HailRobotics.
+                Our members range from seasoned programmers and creative designers to hardware enthusiasts and
+                problem solvers. The club has represented NIT Patna at prestigious platforms such as the
+                <strong>Smart India Hackathon</strong>, currently led by our captain
+                <strong>Dheeraj Kumar</strong>.
+            </p>
+
+            <p>
+                We continuously strive to enhance students’ technical skills while nurturing curiosity
+                in the fascinating world of robotics, automation, and electronics.
             </p>
         </div>
-        <footer>
-            <p>&copy; 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
-        </footer>
+    </section>
 
-        <script>
-            // Same Javascript for Menu
-            const burger = document.getElementById('burger');
-            const navLinks = document.getElementById('navLinks');
-            const navLinksLi = document.querySelectorAll('.nav-links li');
+    <section class="about-section subtle-bg">
+        <h2 class="section-title">What We Do</h2>
+        <div class="about-content">
+            <p>
+                Ever wondered how robots think, move, or make decisions?
+                The Robotics Club of NIT Patna is the perfect place to turn that curiosity into reality.
+            </p>
 
-            burger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                navLinksLi.forEach((link, index) => {
-                    if (link.style.animation) { link.style.animation = ''; }
-                    else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
-                });
-                burger.classList.toggle('toggle');
+            <p>
+                Robotics is a rapidly evolving field that blends mechanical design, electronics,
+                programming, and artificial intelligence. Our club brings together students
+                from all academic backgrounds who share a passion for innovation.
+            </p>
+
+            <p>
+                We believe in learning by building, growing through teamwork, and pushing
+                the boundaries of imagination. Together, we work, compete, and evolve.
+            </p>
+
+            <p class="hashtag">#HailRobotics</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h3>NIT Patna Robotics Club</h3>
+                <p>
+                    Innovating the future through robotics, automation,
+                    and artificial intelligence at NIT Patna.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:robotics@nitp.ac.in">robotics@nitp.ac.in</a></p>
+                <p>NIT Patna, Bihar, India</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Same Javascript for Menu
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        const navLinksLi = document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navLinksLi.forEach((link, index) => {
+                if (link.style.animation) { link.style.animation = ''; }
+                else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
             });
-        </script>
+            burger.classList.toggle('toggle');
+        });
+    </script>
 </body>
 
 </html>

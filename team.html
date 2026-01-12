@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Team | NIT Patna Robotics Club</title>
     <style>
-        
         :root {
             --primary-color: #00d4ff;
             --secondary-color: #0056b3;
@@ -17,7 +17,11 @@
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: var(--font-main);
@@ -27,11 +31,19 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures footer stays at bottom */
+            min-height: 100vh;
+            /* Ensures footer stays at bottom */
         }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
 
         /* --- HEADER STYLES (Same as index.html) --- */
         header {
@@ -47,35 +59,90 @@
             backdrop-filter: blur(10px);
         }
 
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; letter-spacing: 1px; }
-        .nav-links { display: flex; gap: 30px; }
-        .nav-links a:hover { color: var(--primary-color); text-shadow: 0 0 10px rgba(0, 212, 255, 0.5); }
-        
-        /* Highlight the active page link */
-        .nav-links a.active { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
-
-        /* --- BURGER MENU STYLES --- */
-        .burger { display: none; cursor: pointer; }
-        .burger div { width: 25px; height: 3px; background-color: var(--text-light); margin: 5px; transition: all 0.3s ease; }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute; top: 70px; right: 0; height: auto;
-                background: var(--card-bg); width: 100%; flex-direction: column;
-                align-items: center; padding: 30px 0; border-bottom: 2px solid var(--primary-color);
-                transform: translateY(-150%); opacity: 0; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; z-index: 999;
-            }
-            .nav-links.active { transform: translateY(0%); opacity: 1; }
-            .burger { display: block; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); background-color: var(--primary-color); }
-        .toggle .line2 { opacity: 0; }
-        .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); background-color: var(--primary-color); }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Highlight the active page link */
+        .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* --- BURGER MENU STYLES --- */
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-light);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                height: auto;
+                background: var(--card-bg);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px 0;
+                border-bottom: 2px solid var(--primary-color);
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+            background-color: var(--primary-color);
+        }
+
+        .toggle .line2 {
+            opacity: 0;
+        }
+
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+            background-color: var(--primary-color);
+        }
 
         /* --- PAGE SPECIFIC STYLES --- */
         .page-header {
-            background: linear-gradient(rgba(10, 15, 28, 0.8), rgba(10, 15, 28, 0.8)), url('https://source.unsplash.com/random/1600x400/?robotics'); /* Placeholder image */
+            background: linear-gradient(rgba(10, 15, 28, 0.8), rgba(10, 15, 28, 0.8)), url('https://source.unsplash.com/random/1600x400/?robotics');
+            /* Placeholder image */
             background-size: cover;
             background-position: center;
             height: 30vh;
@@ -85,26 +152,55 @@
             margin-bottom: 40px;
         }
 
-        .page-header h1 { font-size: 3rem; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-        .container { padding: 0 10%; flex: 1; margin-bottom: 60px; }
+        .container {
+            padding: 0 10%;
+            flex: 1;
+            margin-bottom: 60px;
+        }
 
         .projects-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .project-card {
-            background: var(--card-bg); padding: 20px; border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s, border-color 0.3s;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
         }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
-        .project-card h3 { margin-bottom: 15px; color: var(--primary-color); }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .project-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
 
         /* --- FOOTER --- */
-        footer { background: #05080f; text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto; }
+        footer {
+            background: #05080f;
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
     </style>
     <link rel="stylesheet" href="newstyle.css">
 </head>
+
 <body>
 
     <header>
@@ -113,8 +209,9 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li> <li><a href="events.html">Events</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="team.html"  class="active">Team</a></li>
             </ul>
         </nav>
         <div class="burger" id="burger">
@@ -130,133 +227,146 @@
 
     <main class="team-page">
 
-        <h1>Meet the Team</h1>
+        <h1 class="team-title">Meet the Team</h1>
 
-        <div class="team">
+        <section class="team-scroll-wrapper">
+            <div class="team-scroll">
 
-            <div class="member">
-                <h2>President</h2>
-                <img src="Team Images/Darshan Jain.png" alt="Darshan Jain"style="width: 350px;">
-                <p>Darshan Jain</p>
+
+                <!-- MEMBER CARD -->
+                <div class="member-card">
+                    <img src="team/Darshan Jain.png" alt="Darshan Jain">
+                    <h3>Darshan Jain</h3>
+                    <span>President</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Deepu Kumar Gupta.png" alt="Deepu Kumar Gupta">
+                    <h3>Deepu Kumar Gupta</h3>
+                    <span>Captain</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Kapish Varshney.png" alt="Kapish Varshney">
+                    <h3>Kapish Varshney</h3>
+                    <span>Vice Captain</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Rathod Niharki.png" alt="Rathod Niharki">
+                    <h3>Rathod Niharki</h3>
+                    <span>Secretary</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Amit Kumar Singh.jpg" alt="Amit Kumar Singh">
+                    <h3>Amit Kumar Singh</h3>
+                    <span>Treasurer</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Vimlesh Meena.jpg" alt="Vimlesh Meena">
+                    <h3>Vimlesh Meena</h3>
+                    <span>Joint Secretary</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Aman Kesari.jpg" alt="Aman Kesari">
+                    <h3>Aman Kesari</h3>
+                    <span>Technical Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Aryansh Gupta.jpg" alt="Aryansh Gupta">
+                    <h3>Aryansh Gupta</h3>
+                    <span>Technical Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Ankur Narayan Singh.jpg" alt="Ankur Narayan Singh">
+                    <h3>Ankur Narayan Singh</h3>
+                    <span>Project Management Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Ritik Jha.jpg" alt="Ritik Jha">
+                    <h3>Ritik Jha</h3>
+                    <span>Project Management Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Suraj Kumar.jpg" alt="Suraj Kumar">
+                    <h3>Suraj Kumar</h3>
+                    <span>Graphics & Design Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Anjali Raj.jpg" alt="Anjali Raj">
+                    <h3>Anjali Raj</h3>
+                    <span>Project Management Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Lipi Aditi.jpg" alt="Lipi Aditi">
+                    <h3>Lipi Aditi</h3>
+                    <span>Web Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Nandani Kumari.jpg" alt="Nandani Kumari">
+                    <h3>Nandani Kumari</h3>
+                    <span>PR & Promotion Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Ankit Kumar.jpg" alt="Ankit Kumar">
+                    <h3>Ankit Kumar</h3>
+                    <span>Content Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Shristy Kumari.jpg" alt="Shristy Kumari">
+                    <h3>Shristy Kumari</h3>
+                    <span>Content Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Raja Kumar.jpg" alt="Raja Kumar">
+                    <h3>Raja Kumar</h3>
+                    <span>Event Management Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Shivangi Singh.jpg" alt="Shivangi Singh">
+                    <h3>Shivangi Singh</h3>
+                    <span>Member Development Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Khushi Verma.jpg" alt="Khushi Verma">
+                    <h3>Khushi Verma</h3>
+                    <span>3D Modelling & CAD Lead</span>
+                </div>
+
+                <div class="member-card">
+                    <img src="team/Krishna Kant Verma.jpg" alt="Krishna Kant Verma">
+                    <h3>Krishna Kant Verma</h3>
+                    <span>Videography & Media Lead</span>
+                </div>
+
             </div>
-
-            <div class="member">
-                <h2>Captain</h2>
-                <img src="Team Images/Deepu Kumar Gupta.png" alt="Deepu Kumar Gupta" style="width: 350px;">
-                <p>Deepu Kumar Gupta</p>
-            </div>
-
-            <div class="member">
-                <h2>Vice Captain</h2>
-                <img src="Team Images/Kapish Varshney.png" alt="Kapish Varshney"style="width: 350px;">
-                <p>Kapish Varshney</p>
-            </div>
-
-            <div class="member">
-                <h2>Secretary</h2>
-                <img src="Team Images/Rathod Niharki.png" alt="Rathod Niharki" style="width: 350px;">
-                <p>Rathod Niharki</p>
-            </div>
-
-            <div class="member">
-                <h2>Treasurer</h2>
-                <img src="Team Images/Amit Kumar Singh.jpg" alt="Amit Kumar Singh" style="width: 350px;">
-                <p>Amit Kumar Singh</p>
-            </div>
-
-            <div class="member">
-                <h2>Joint Secretary</h2>
-                <img src="Team Images/Vimlesh Meena.jpg" alt="Vimlesh Meena" style="width: 350px;">
-                <p>Vimlesh Meena</p>
-            </div>
-
-            <div class="member">
-                <h2>Technical Lead</h2>
-                <img src="Team Images/Aman Kesari.jpg" alt="Aman Kesari" style="width: 350px;">
-                <p>Aman Kesari</p>
-            </div>
-
-            <div class="member">
-                <h2>Technical Lead</h2>
-                <img src="Team Images/Aryansh Gupta.jpg" alt="Aryansh Gupta" style="width: 350px;">
-                <p>Aryansh Gupta</p>
-            </div>
-
-            <div class="member">
-                <h2>Project Management Lead</h2>
-                <img src="Team Images/Ankur Narayan Singh.jpg" alt="Ankur Narayan Singh" style="width: 350px;">
-                <p>Ankur Narayan Singh</p>
-            </div>
-
-            <div class="member">
-                <h2>Project Management Lead</h2>
-                <img src="Team Images/Ritik Jha.jpg" alt="Ritik Jha" style="width: 350px;">
-                <p>Ritik Jha</p>
-            </div>
-
-            <div class="member">
-                <h2>Graphics and Design Lead</h2>
-                <img src="Team Images/Suraj Kumar.jpg" alt="Suraj Kumar" style="width: 350px;">
-                <p>Suraj Kumar</p>
-            </div>
-
-            <div class="member">
-                <h2>Project Management Lead</h2>
-                <img src="Team Images/Anjali Raj.jpg" alt="Anjali Raj" style="width: 350px;">
-                <p>Anjali Raj</p>
-            </div>
-
-            <div class="member">
-                <h2>Web Lead</h2>
-                <img src="Team Images/Lipi Aditi.jpg" alt="Lipi Aditi" style="width: 350px;">
-                <p>Lipi Aditi</p>
-            </div>
-
-            <div class="member">
-                <h2>PR and Promotion Lead</h2>
-                <img src="Team Images/Nandani Kumari.jpg" alt="Nandani Kumari" style="width: 350px;">
-                <p>Nandani Kumari</p>
-            </div>
-
-            <div class="member">
-                <h2>Content Lead</h2>
-                <img src="Team Images/Ankit Kumar.jpg" alt="Ankit Kumar" style="width: 350px;">
-                <p>Ankit Kumar</p>
-            </div>
-
-            <div class="member">
-                <h2>Content Lead</h2>
-                <img src="Team Images/Shristy Kumari.jpg" alt="Shristy Kumari" style="width: 350px;">
-                <p>Shristy Kumari</p>
-            </div>
-
-            <div class="member">
-                <h2>Event Management Lead</h2>
-                <img src="Team Images/Raja Kumar.jpg" alt="Raja Kumar" style="width: 350px;">
-                <p>Raja Kumar</p>
-            </div>
-
-            <div class="member">
-                <h2>Member Development Lead</h2>
-                <img src="Team Images/Shivangi Singh.jpg" alt="Shivangi Singh" style="width: 350px;">
-                <p>Shivangi Singh</p>
-            </div>
-
-            <div class="member">
-                <h2>3D Modelling and CAD Lead</h2>
-                <img src="Team Images/Khushi Verma.jpg" alt="Khushi Verma" style="width: 350px;">
-                <p>Khushi Verma</p>
-            </div>
-
-            <div class="member">
-                <h2>Videography and Media Lead</h2>
-                <img src="Team Images/Krishna Kant Verma.jpg" alt="Krishna Kant Verma" style="width: 350px;">
-                <p>Krishna Kant Verma</p>
-            </div>
-
-        </div>
+        </section>
 
     </main>
+    <script>
+        const teamScroll = document.querySelector('.team-scroll');
+
+        teamScroll.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            teamScroll.scrollLeft += e.deltaY * 1.2;
+        }, { passive: false });
+    </script>
 
 </body>
+
 </html>
