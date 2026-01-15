@@ -1,210 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | NIT Patna Robotics Club</title>
+    <title>About Us | NIT Patna Robotics Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">
     <style>
-        :root {
-            --primary-color: #00d4ff;
-            --secondary-color: #0056b3;
-            --dark-bg: #0a0f1c;
-            --card-bg: #141b2d;
-            --text-light: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --accent: #ff0055;
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .about-container {
+            padding: 0 10% 80px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
+        
+        .about-section {
             display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            /* Ensures footer stays at bottom */
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* --- HEADER STYLES (Same as index.html) --- */
-        header {
-            display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 80px;
             align-items: center;
-            padding: 20px 5%;
-            background: rgba(10, 15, 28, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-        }
-
-        /* Highlight the active page link */
-        .nav-links a.active {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        /* --- BURGER MENU STYLES --- */
-        .burger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-light);
-            margin: 5px;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                right: 0;
-                height: auto;
-                background: var(--card-bg);
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                padding: 30px 0;
-                border-bottom: 2px solid var(--primary-color);
-                transform: translateY(-150%);
-                opacity: 0;
-                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-                z-index: 999;
-            }
-
-            .nav-links.active {
-                transform: translateY(0%);
-                opacity: 1;
-            }
-
-            .burger {
-                display: block;
-            }
-        }
-
-        .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-            background-color: var(--primary-color);
-        }
-
-        .toggle .line2 {
-            opacity: 0;
-        }
-
-        .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
-            background-color: var(--primary-color);
-        }
-
-        /* --- PAGE SPECIFIC STYLES --- */
-        .page-header {
-            background: linear-gradient(rgba(10, 15, 28, 0.8), rgba(10, 15, 28, 0.8)), url('https://source.unsplash.com/random/1600x400/?robotics');
-            /* Placeholder image */
-            background-size: cover;
-            background-position: center;
-            height: 30vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .container {
-            padding: 0 10%;
+        .about-text {
             flex: 1;
-            margin-bottom: 60px;
+            min-width: 300px;
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        .project-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-color);
-        }
-
-        .project-card h3 {
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #05080f;
-            text-align: center;
+        /* "Mission" Box Styling */
+        .highlight-box {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(0, 86, 179, 0.05));
+            border: 1px solid var(--primary);
             padding: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: auto;
+            border-radius: 20px;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+
+        .highlight-box::before {
+            content: '"';
+            position: absolute;
+            top: -25px;
+            left: 30px;
+            font-size: 6rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: serif;
+            line-height: 1;
         }
     </style>
-    <link rel="stylesheet" href="newstyle.css">
 </head>
-
 <body>
+    <canvas id="particles-js"></canvas>
 
     <header>
-        <div class="logo">NITP Robotics</div>
+        <div class="logo">NITP <span>ROBOTICS</span></div>
         <nav>
             <ul class="nav-links" id="navLinks">
                 <li><a href="home.html">Home</a></li>
@@ -214,123 +72,46 @@
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
-        <div class="burger" id="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+        <div class="burger" id="burger"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div>
     </header>
 
-    <div class="page-header">
-        <h1>About Us</h1>
-    </div>
-
-    <section class="about-section">
-        <h2 class="section-title">Who We Are</h2>
-        <div class="about-content">
-            <p>
-                The Robotics Club of NIT Patna has been an embodiment of innovation since its inception in 2015–16
-                under the guidance of <strong>Mr. Nripendra Saroj</strong>.
-                Our club carries a proud legacy of excellence, collaboration, and technological exploration.
-            </p>
-
-            <p>
-                Our members range from seasoned programmers and creative designers to hardware enthusiasts and
-                problem solvers. The club has represented NIT Patna at prestigious platforms such as the
-                <strong>Smart India Hackathon</strong>, currently led by our captain
-                <strong>Dheeraj Kumar</strong>.
-            </p>
-
-            <p>
-                We continuously strive to enhance students’ technical skills while nurturing curiosity
-                in the fascinating world of robotics, automation, and electronics.
-            </p>
+    <main style="padding-top: 100px;">
+        <div class="section-header">
+            <h2>Our Story</h2>
         </div>
-    </section>
 
-    <section class="about-section subtle-bg">
-        <h2 class="section-title">What We Do</h2>
-        <div class="about-content">
-            <p>
-                Ever wondered how robots think, move, or make decisions?
-                The Robotics Club of NIT Patna is the perfect place to turn that curiosity into reality.
-            </p>
-
-            <p>
-                Robotics is a rapidly evolving field that blends mechanical design, electronics,
-                programming, and artificial intelligence. Our club brings together students
-                from all academic backgrounds who share a passion for innovation.
-            </p>
-
-            <p>
-                We believe in learning by building, growing through teamwork, and pushing
-                the boundaries of imagination. Together, we work, compete, and evolve.
-            </p>
-
-            <p class="hashtag">#HailRobotics</p>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-
-            <div class="footer-section">
-                <h3>NIT Patna Robotics Club</h3>
-                <p>
-                    Innovating the future through robotics, automation,
-                    and artificial intelligence at NIT Patna.
-                </p>
+        <div class="about-container">
+            
+            <div class="about-section">
+                <div class="about-text">
+                    <h3 style="color:var(--text-main); font-family:var(--font-head); margin-bottom:15px; font-size:1.5rem;">Who We Are</h3>
+                    <p>The Robotics Club of NIT Patna has been an embodiment of innovation since its inception in 2015–16 under the guidance of <strong>Mr. Nripendra Saroj</strong>. Our club carries a proud legacy of excellence, collaboration, and technological exploration.</p>
+                    <p>Our members range from seasoned programmers and creative designers to hardware enthusiasts. We have represented NIT Patna at prestigious platforms such as the <strong>Smart India Hackathon</strong>.</p>
+                </div>
+                <div class="highlight-box">
+                    <h4 style="color:var(--primary); margin-bottom:15px; font-family:var(--font-head);">Our Mission</h4>
+                    <p style="color:var(--text-main); font-size: 1.1rem;">To continuously strive to enhance students’ technical skills while nurturing curiosity in the fascinating world of robotics, automation, and electronics.</p>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:robotics@nitp.ac.in">robotics@nitp.ac.in</a></p>
-                <p>NIT Patna, Bihar, India</p>
-            </div>
-
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">YouTube</a>
+            <div class="about-section" style="flex-direction: row-reverse;">
+                <div class="about-text">
+                    <h3 style="color:var(--text-main); font-family:var(--font-head); margin-bottom:15px; font-size:1.5rem;">What We Do</h3>
+                    <p>Ever wondered how robots think, move, or make decisions? We blend mechanical design, electronics, programming, and AI to turn curiosity into reality.</p>
+                    <p>We believe in learning by building. Together, we work, compete, and evolve.</p>
+                    <p style="color: var(--primary); font-weight: bold; font-size: 1.2rem; letter-spacing: 1px;">#HailRobotics</p>
+                </div>
+                <div style="flex:1; display:flex; justify-content:center; align-items:center;">
+                    <img src="Robotics Club Logo.png" alt="Club Logo" style="opacity:0.8; max-width:200px; filter: drop-shadow(0 0 20px rgba(0,212,255,0.3));">
                 </div>
             </div>
 
         </div>
+    </main>
 
-        <div class="footer-bottom">
-            <p>© 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
-        </div>
+    <footer>
+        <div class="copyright"><p>© 2026 NIT Patna Robotics Club.</p></div>
     </footer>
-
-
-    <script>
-        // Same Javascript for Menu
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        const navLinksLi = document.querySelectorAll('.nav-links li');
-
-        burger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navLinksLi.forEach((link, index) => {
-                if (link.style.animation) { link.style.animation = ''; }
-                else { link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`; }
-            });
-            burger.classList.toggle('toggle');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIT Patna Robotics Club | Official Website</title>
+    <title>NIT Patna Robotics Club | Innovate. Build. Dominate.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="newstyle.css">
 </head>
-
 <body>
+
+    <canvas id="particles-js"></canvas>
 
     <header>
         <div class="logo">
-            <img src="Robotics Club Logo.png" alt="NIT Patna Robotics Club Logo">
+            <img src="Robotics Club Logo.png" alt="Logo" style="height: 40px; margin-right:10px;">
+            NITP <span>ROBOTICS</span>
         </div>
-        <div class="logo" class="heading">NITP ROBOTICS</div>
         <nav>
             <ul class="nav-links" id="navLinks">
-                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
-
         <div class="burger" id="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -32,126 +35,83 @@
         </div>
     </header>
 
-    <section class="hero" id="home">
-        <h1>Innovate. Build. Dominate.</h1>
-        <p>The official Robotics Club of NIT Patna. Fostering a community of creators, engineers, and tech enthusiasts.
-        </p>
-        <div class="hero-btns">
-            <a href="about.html" class="btn-join">About us</a>
-            <a href="projects.html" class="btn-join">View Projects</a>
-            <a href="contact.html" class="btn-outline">Contact Us</a>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="footer-container">
-
-            <!-- Club Info -->
-            <div class="footer-section">
-                <h3>NIT Patna Robotics Club</h3>
-                <p>
-                    Innovating the future through robotics, AI, and engineering.
-                    We build, learn, and compete together.
-                </p>
+    <main>
+        <section class="hero">
+            <h1>ENGINEERING <br> THE FUTURE</h1>
+            <p>The official Robotics Club of NIT Patna. We are a community of creators, engineers, and visionaries building tomorrow's technology today.</p>
+            <div class="cta-group">
+                <a href="projects.html" class="btn btn-primary">View Projects</a>
+                <a href="about.html" class="btn btn-secondary">About Us</a>
             </div>
+        </section>
 
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h4>Quick Links</h4>
+        <section id="featured-projects">
+            <div class="section-header">
+                <h2>Featured Innovation</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="card">
+                    <div class="card-img-box">
+                        <img src="projects/Self balancing bot.webp" alt="Self Balancing Bot">
+                    </div>
+                    <div class="card-content">
+                        <h3>Self Balancing Bot</h3>
+                        <p>An inverted pendulum system using MPU6050 sensors and PID control algorithms for real-time equilibrium.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-box">
+                        <img src="projects/Mark 1.6.png" alt="Mark 1.6 Arm">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mark 1.6 Arm</h3>
+                        <p>Wireless Bluetooth-controlled robotic arm mounted on a 4WD chassis with 5 degrees of freedom.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-box">
+                        <img src="projects/pluto x.png" alt="Pluto X">
+                    </div>
+                    <div class="card-content">
+                        <h3>Pluto X Drone</h3>
+                        <p>Open-source nano drone capable of autonomous flight and ROS integration for aerial mapping.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>NITP Robotics</h4>
+                <p>Innovating the future through robotics, AI, and engineering excellence.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
                 <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#domains">Domains</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#team">Team</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
                 </ul>
             </div>
-
-            <!-- Contact Info -->
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:robotics@nitp.ac.in">robotics@nitp.ac.in</a></p>
-                <p>NIT Patna, Bihar, India</p>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
             </div>
-
-            <!-- Social Media -->
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">YouTube</a>
-                </div>
-            </div>
-
         </div>
-
-        <!-- Bottom Line -->
-        <div class="footer-bottom">
-            <p>© 2026 NIT Patna Robotics Club. All Rights Reserved.</p>
+        <div class="copyright">
+            <p>&copy; 2026 NIT Patna Robotics Club. Built with precision.</p>
         </div>
     </footer>
 
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        const navLinksLi = document.querySelectorAll('.nav-links li');
-
-        burger.addEventListener('click', () => {
-            // Toggle Nav
-            navLinks.classList.toggle('active');
-
-            // Animate Links (Staggered Effect)
-            navLinksLi.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    // This creates the cascading delay
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
-
-            // Burger Animation (Turn into X)
-            burger.classList.toggle('toggle');
-        });
-
-        // Close menu when a link is clicked
-        navLinksLi.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                burger.classList.remove('toggle');
-                navLinksLi.forEach(link => link.style.animation = '');
-            });
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Fade-in Animation Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        document.querySelectorAll('.project-card').forEach((el) => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
