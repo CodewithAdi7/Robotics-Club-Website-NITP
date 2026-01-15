@@ -31,8 +31,8 @@
         }
 
         .member-img {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 20px;
@@ -67,14 +67,26 @@
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             padding: 0 5%;
         }
 
         .lead-card {
             transform: scale(1.05);
-            border-color: var(--primary); /* Highlight leaders */
+            border-color: var(--primary);
             background: rgba(0, 212, 255, 0.05);
+            min-width: 280px;
+        }
+
+        .tier-title {
+            text-align: center;
+            margin: 60px 0 30px;
+            font-family: var(--font-head);
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -82,7 +94,10 @@
     <canvas id="particles-js"></canvas>
 
     <header>
-        <div class="logo">NITP <span>ROBOTICS</span></div>
+        <div class="logo">
+            <img src="Robotics Club Logo.png" alt="Logo" style="height: 40px; margin-right:10px;">
+            NITP <span>ROBOTICS</span>
+        </div>
         <nav>
             <ul class="nav-links" id="navLinks">
                 <li><a href="home.html">Home</a></li>
@@ -98,7 +113,7 @@
     <main style="padding-top: 100px;">
         <div class="section-header">
             <h2>Meet The Team</h2>
-            <p style="color:var(--text-muted); margin-top:10px;">The minds behind the machines.</p>
+            <p style="color:var(--text-muted); margin-top:10px;">The innovative minds driving NIT Patna Robotics.</p>
         </div>
 
         <div class="lead-section">
@@ -109,7 +124,7 @@
             </div>
             
             <div class="member-card lead-card">
-                <img src="team/Deepu Kumar Gupta.png" alt="Deepu Kumar" class="member-img">
+                <img src="team/Deepu Kumar Gupta.png" alt="Deepu Kumar Gupta" class="member-img">
                 <h3>Deepu Kumar Gupta</h3>
                 <span>Captain</span>
             </div>
@@ -121,8 +136,8 @@
             </div>
         </div>
 
+        <h3 class="tier-title">Executive Board</h3>
         <div class="team-grid">
-            
             <div class="member-card">
                 <img src="team/Rathod Niharki.png" alt="Rathod Niharki" class="member-img">
                 <h3>Rathod Niharki</h3>
@@ -130,7 +145,7 @@
             </div>
 
             <div class="member-card">
-                <img src="team/Amit Kumar Singh.jpg" alt="Amit Kumar" class="member-img">
+                <img src="team/Amit Kumar Singh.jpg" alt="Amit Kumar Singh" class="member-img">
                 <h3>Amit Kumar Singh</h3>
                 <span>Treasurer</span>
             </div>
@@ -140,7 +155,11 @@
                 <h3>Vimlesh Meena</h3>
                 <span>Joint Secretary</span>
             </div>
+        </div>
 
+        <h3 class="tier-title">Team Leads</h3>
+        <div class="team-grid">
+            
             <div class="member-card">
                 <img src="team/Aman Kesari.jpg" alt="Aman Kesari" class="member-img">
                 <h3>Aman Kesari</h3>
@@ -152,26 +171,80 @@
                 <h3>Aryansh Gupta</h3>
                 <span>Technical Lead</span>
             </div>
-            
-             <div class="member-card">
+
+            <div class="member-card">
                 <img src="team/Ankur Narayan Singh.jpg" alt="Ankur Narayan Singh" class="member-img">
                 <h3>Ankur Narayan Singh</h3>
                 <span>Project Management</span>
             </div>
 
             <div class="member-card">
-                <img src="team/Suraj Kumar.jpg" alt="Suraj Kumar" class="member-img">
-                <h3>Suraj Kumar</h3>
-                <span>Graphics Lead</span>
+                <img src="team/Ritik Jha.jpg" alt="Ritik Jha" class="member-img">
+                <h3>Ritik Jha</h3>
+                <span>Project Management</span>
             </div>
 
-             <div class="member-card">
+            <div class="member-card">
+                <img src="team/Anjali Raj.jpg" alt="Anjali Raj" class="member-img">
+                <h3>Anjali Raj</h3>
+                <span>Project Management</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Suraj Kumar.jpg" alt="Suraj Kumar" class="member-img">
+                <h3>Suraj Kumar</h3>
+                <span>Graphics & Design</span>
+            </div>
+
+            <div class="member-card">
                 <img src="team/Lipi Aditi.jpg" alt="Lipi Aditi" class="member-img">
                 <h3>Lipi Aditi</h3>
                 <span>Web Lead</span>
             </div>
 
+            <div class="member-card">
+                <img src="team/Nandani Kumari.jpg" alt="Nandani Kumari" class="member-img">
+                <h3>Nandani Kumari</h3>
+                <span>PR & Promotion</span>
             </div>
+
+            <div class="member-card">
+                <img src="team/Ankit Kumar.jpg" alt="Ankit Kumar" class="member-img">
+                <h3>Ankit Kumar</h3>
+                <span>Content Lead</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Shristy Kumari.jpg" alt="Shristy Kumari" class="member-img">
+                <h3>Shristy Kumari</h3>
+                <span>Content Lead</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Raja Kumar.jpg" alt="Raja Kumar" class="member-img">
+                <h3>Raja Kumar</h3>
+                <span>Event Management</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Shivangi Singh.jpg" alt="Shivangi Singh" class="member-img">
+                <h3>Shivangi Singh</h3>
+                <span>Member Development</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Khushi Verma.jpg" alt="Khushi Verma" class="member-img">
+                <h3>Khushi Verma</h3>
+                <span>3D Modelling & CAD</span>
+            </div>
+
+            <div class="member-card">
+                <img src="team/Krishna Kant Verma.jpg" alt="Krishna Kant Verma" class="member-img">
+                <h3>Krishna Kant Verma</h3>
+                <span>Videography & Media</span>
+            </div>
+            
+        </div>
     </main>
 
     <footer>
