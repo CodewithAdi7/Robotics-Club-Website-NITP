@@ -1,15 +1,15 @@
-NIT Patna RoboticsClub Official Website
+NIT Patna RoboticsClub Website
 Project Overview
 
 live demo:- https://codewithadi7.github.io/Robotics-Club-Website-NITP/
 
 
-This repository hosts the source code for the NIT Patna Robotics Club web platform. The application serves as the primary digital interface for the club, showcasing projects, upcoming events, team structure, and organizational history.
+This repository hosts the source code for the NIT Patna Robotics Club web platform.
+
 
 The architecture follows a strict static site generation approach using semantic HTML5, CSS3, and Vanilla JavaScript. The design philosophy prioritizes performance, utilizing native browser APIs for animations and layout (CSS Grid/Flexbox) to eliminate the need for heavy external dependencies or frameworks.
 
-Technical Architecture
-The codebase is structured around three core pillars:
+Tech used:- 
 
 Semantic Structure (HTML): The document object model is organized semantically to ensure accessibility and SEO optimization.
 
@@ -17,22 +17,10 @@ Design System (CSS): The visual layer utilizes CSS Custom Properties (Variables)
 
 Behavioral Logic (JavaScript): Interactivity is handled via a single, consolidated script that manages the canvas rendering engine, DOM manipulation for navigation, and Intersection Observers for scroll-based entrance animations.
 
-Directory Structure
-Plaintext
 
-/
-├── index.html          # Landing page entry point
-├── about.html          # Organization history and mission statement
-├── projects.html       # Technical portfolio with interactive overlays
-├── events.html         # Event schedule and competition details
-├── team.html           # Hierarchy visualization and member roster
-├── style.css           # Global stylesheet and responsive definitions
-└── script.js           # Core application logic and canvas engine
 Module Descriptions
 1. Canvas Particle Engine (script.js)
 The background visualization is not a video or a static image but a computationally generated network rendered in real-time.
-
-Initialization: The script targets the <canvas> element and resizes it to the window viewport.
 
 Particle Class: A Particle class is defined to manage individual node properties, including X/Y coordinates, velocity vectors, and color data.
 
@@ -57,21 +45,6 @@ Responsive Design: Media queries are implemented at the 768px breakpoint. The na
 Mobile Navigation: A toggle event listener manipulates class lists on the navigation header to handle state changes (active/inactive).
 
 Scroll Observer: The application uses the IntersectionObserver API. This asynchronous observer watches for elements entering the viewport and triggers a CSS transform (fade-up) to smooth the user experience during scrolling.
-
-Installation and Setup
-As a static site, the project requires no build tools, bundlers (like Webpack), or package managers (like npm).
-
-Prerequisites
-A modern web browser with support for HTML5 Canvas and CSS Grid.
-
-A code editor (VS Code is recommended).
-
-Local Deployment
-Clone the repository to the local environment.
-
-Navigate to the project directory.
-
-The site can be launched directly by opening index.html in a browser.
 
 Note regarding local file policies: Some browsers restrict ES6 module loading or specific canvas operations when opening files directly via the file:// protocol. It is recommended to use a local development server.
 
@@ -102,6 +75,7 @@ Microsoft Edge (Chromium-based)
 Safari (macOS and iOS)
 
 Authors
+
 Aditya Kunwar - 2506069 - CSE Dept.
 Lucky Kumar - 2512003 - EE(VLSI) Dept.
 Utkarsh Kumar - 2504040 - ECE Dept.
