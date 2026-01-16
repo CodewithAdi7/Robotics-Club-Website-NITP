@@ -2,6 +2,8 @@ NIT Patna RoboticsClub Official Website
 Project Overview
 
 live demo:- https://codewithadi7.github.io/Robotics-Club-Website-NITP/
+
+
 This repository hosts the source code for the NIT Patna Robotics Club web platform. The application serves as the primary digital interface for the club, showcasing projects, upcoming events, team structure, and organizational history.
 
 The architecture follows a strict static site generation approach using semantic HTML5, CSS3, and Vanilla JavaScript. The design philosophy prioritizes performance, utilizing native browser APIs for animations and layout (CSS Grid/Flexbox) to eliminate the need for heavy external dependencies or frameworks.
